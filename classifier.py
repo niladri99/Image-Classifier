@@ -66,19 +66,8 @@ print ("sigmoid([0, 2]) = " + str(sigmoid(np.array([0,2]))))
 
 
 def initialize_with_zeros(dim):
-    """
-    This function creates a vector of zeros of shape (dim, 1) for w and initializes b to 0.
-    
-    Argument:
-    dim -- size of the w vector we want (or number of parameters in this case)
-    
-   # Returns:
-   #w -- initialized vector of shape (dim, 1)
-   # b -- initialized scalar (corresponds to the bias)
     w = np.zeros(shape=(dim, 1))
     b = 0
-
-
     assert(w.shape == (dim, 1))
     assert(isinstance(b, float) or isinstance(b, int))
     
@@ -177,13 +166,10 @@ def predict(w, b, X):
     
     for i in range(A.shape[1]):
         
-        # Convert probabilities A[0,i] to actual predictions p[0,i]
-        ### START CODE HERE ### (≈ 4 lines of code)
         if(A[0,i]>0.5):
             Y_prediction[0,i]=1
         else:
             Y_prediction[0,i]=0
-        ### END CODE HERE ###
     
     assert(Y_prediction.shape == (1, m))
     
