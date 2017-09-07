@@ -44,7 +44,6 @@ train_set_x_orig
 
 train_set_x_flatten = train_set_x_orig.reshape(train_set_x_orig.shape[0], -1).T
 test_set_x_flatten = test_set_x_orig.reshape(test_set_x_orig.shape[0], -1).T
-### END CODE HERE ###
 
 print ("train_set_x_flatten shape: " + str(train_set_x_flatten.shape))
 print ("train_set_y shape: " + str(train_set_y.shape))
@@ -59,18 +58,7 @@ test_set_x = test_set_x_flatten/255.
 
 
 def sigmoid(z):
-    """
-    Compute the sigmoid of z
-
-    Arguments:
-    z -- A scalar or numpy array of any size.
-
-    Return:
-    s -- sigmoid(z)
-    """
-
-    s = 1/(1+np.exp(-z))
-    
+    s = 1/(1+np.exp(-z))    
     return s
 
 
